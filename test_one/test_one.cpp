@@ -3,8 +3,8 @@ using namespace std;
 const float PI = 3.1416;
 void main()
 {
-	int iType;
-	float radius, a, b, area;
+	int iType=1;
+	float radius=0, a=0, b=0, area=0;
 	cout << "图形的类型为___(1为圆形，2为长方形，3为正方形):";
 	cin >> iType;
 	switch (iType)

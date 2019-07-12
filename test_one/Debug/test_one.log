@@ -1,4 +1,0 @@
-﻿  test_one.cpp
-E:\vscode\CPlusExecises\test_one\test_one.cpp(3,24): warning C4305:  “初始化”: 从“double”到“float”截断
-E:\vscode\CPlusExecises\test_one\test_one.cpp(5,1): warning C4326:  “main”的返回类型应为“int”而非“void”
-  test_one.vcxproj -> E:\vscode\CPlusExecises\test_one\Debug\test_one.exe
