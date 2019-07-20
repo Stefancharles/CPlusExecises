@@ -1,0 +1,3 @@
+E:/vscode/CPlusExecises/cplustest/cmake-build-debug/CMakeFiles/cplustest.dir
+E:/vscode/CPlusExecises/cplustest/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/vscode/CPlusExecises/cplustest/cmake-build-debug/CMakeFiles/rebuild_cache.dir

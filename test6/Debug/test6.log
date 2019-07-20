@@ -1,0 +1,8 @@
+﻿  test6.cpp
+E:\vscode\CPlusExecises\test6\test6.cpp(63,1): warning C4326:  “main”的返回类型应为“int”而非“void”
+E:\vscode\CPlusExecises\test6\test6.cpp(65,10): error C2385:  对“Run”的访问不明确
+E:\vscode\CPlusExecises\test6\test6.cpp(65,10): message :  可能是“Run”(位于基“Vehicle”中)
+E:\vscode\CPlusExecises\test6\test6.cpp(65,10): message :  也可能是“Run”(位于基“Vehicle”中)
+E:\vscode\CPlusExecises\test6\test6.cpp(66,11): error C2385:  对“Stop”的访问不明确
+E:\vscode\CPlusExecises\test6\test6.cpp(66,11): message :  可能是“Stop”(位于基“Vehicle”中)
+E:\vscode\CPlusExecises\test6\test6.cpp(66,11): message :  也可能是“Stop”(位于基“Vehicle”中)
