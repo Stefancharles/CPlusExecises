@@ -9,82 +9,107 @@ public:
     Point();
     Point(double X1, double Y1);
     ~Point();
-    void setPoint();
+    Point setPoint();
     void showPoint();
+    double getX() const;
+    double getY() const;
 private:
-    double x1{}, y1{};
+    double x, y;
 };
 
 Point::Point(double X1, double Y1)
 {
-    x1 = X1;
-    y1 = Y1;
+    x = X1;
+    y = Y1;
 }
 
 Point::~Point()
 = default;
 
-void Point::setPoint()
+Point Point::setPoint()
 {
-    cout << "Input x1 and y1"<< endl;
-    cin >> x1 >> y1;
+    cout << "Input x and y"<< endl;
+    cin >> x >> y;
+    return *this;
 }
 
 void Point::showPoint()
 {
-    cout << "The Point is :(" << x1 << "," << y1 << ")" << endl;
+    cout << "The Point is :(" << x << "," << y << ")" << endl;
 }
 
 Point::Point() {
 
 }
 
+double Point::getX() const {
+    return x;
+}
 
-class Triangle : public Point
+double Point::getY() const {
+    return y;
+}
+
+
+class Triangle
 {
 public:
-    Triangle(double X1, double Y1, double X2, double Y2, double X3, double Y3);
+    Triangle();
     ~Triangle();
-    Triangle(const Triangle& t);
-    friend Triangle operator==(const Triangle& t1, const Triangle& t2);
+    friend int operator==(const Triangle& t1, const Triangle& t2);
     friend  ostream& operator << (ostream& out, const Triangle& t1);
     double findPerimeter();
 
 private:
+    Point a,b,c;
     double perimeter = 0.0;
-    double x1, y1, x2, y2, x3, y3;
+
 };
 
-
-Triangle::Triangle(double X1, double Y1, double X2, double Y2, double X3, double Y3)
-{
-    x1 = X1; y1 = Y1;
-    x2 = X2; y2 = Y2;
-    x3 = X3; y3 = Y3;
+Triangle::Triangle(){
+    a = a.setPoint();
+    b = b.setPoint();
+    c = c.setPoint();
 }
 
 Triangle::~Triangle()
 = default;
 
-Triangle::Triangle(const Triangle& t)
- : Point(t) {
-    x1 = t.x1; y1 = t.y1;
-    x2 = t.x2; y2 = t.y2;
-    x3 = t.x3; y3 = t.y3;
-
-}
 
 double Triangle::findPerimeter()
 {
-    perimeter = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)) + sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3)) + sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
+    perimeter = 0.0;//意思一下
+    cout << "Perimeter is:" << perimeter << endl;
     return perimeter;
 }
 
-Triangle operator==(const Triangle& t1, const Triangle& t2)
+int operator==(const Triangle& t1, const Triangle& t2)
 {
-    return Triangle(0,0,0,0,0,0);
+    if((t1.a.getX()==t2.a.getX())&&(t1.a.getY()==t2.a.getY()))//意思一下
+        return 1;
+    else
+        return 0;
+
 }
 
-ostream &operator<<(ostream &out, const Triangle &t1) {
+ostream &operator<<(ostream &out, const Triangle &t1)//意思一下
+{
+    cout << "The Point is :(" << t1.a.getX() << "," << t1.a.getY() << ")" << endl;
+    cout << "The Point is :(" << t1.a.getX() << "," << t1.a.getY() << ")" << endl;
+    cout << "The Point is :(" << t1.a.getX() << "," << t1.a.getY() << ")" << endl;
+}
+
+int main()
+{
+    Triangle a = Triangle();
+    Triangle b = Triangle();
+    a.findPerimeter();
+    b.findPerimeter();
+    if(a==b)
+        cout << "Match!" << endl;
+    else
+        cout << "No Match!" << endl;
+
+    cout << a << endl;
 
 }
